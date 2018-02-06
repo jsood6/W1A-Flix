@@ -11,6 +11,8 @@
 		ED066DB389C80527500AE3DF /* Pods_W1A_FlixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E6D5181BFF95121C27792B /* Pods_W1A_FlixUITests.framework */; };
 		FC6037FD6A00CAF17ED07DCE /* Pods_W1A_Flix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5191CECD0787F879A2FD65 /* Pods_W1A_Flix.framework */; };
 		FF0633C3202972110019CA81 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0633C2202972110019CA81 /* DetailViewController.swift */; };
+		FF0633C520297A840019CA81 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0633C420297A840019CA81 /* PosterCell.swift */; };
+		FF0633C720297AEF0019CA81 /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0633C620297AEF0019CA81 /* SuperheroViewController.swift */; };
 		FF4D250220214CB3001AF361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D250120214CB3001AF361 /* AppDelegate.swift */; };
 		FF4D250720214CB3001AF361 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4D250520214CB3001AF361 /* Main.storyboard */; };
 		FF4D250920214CB3001AF361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4D250820214CB3001AF361 /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		D5C4E57303AA9F5513AB6C6F /* Pods-W1A-Flix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W1A-Flix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-W1A-Flix/Pods-W1A-Flix.debug.xcconfig"; sourceTree = "<group>"; };
 		F2E6D5181BFF95121C27792B /* Pods_W1A_FlixUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_W1A_FlixUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0633C2202972110019CA81 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FF0633C420297A840019CA81 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
+		FF0633C620297AEF0019CA81 /* SuperheroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroViewController.swift; sourceTree = "<group>"; };
 		FF4D24FE20214CB3001AF361 /* W1A-Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "W1A-Flix.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF4D250120214CB3001AF361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF4D250620214CB3001AF361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		FF0633C0202971D30019CA81 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FFDBD2F120256CC600389F95 /* MovieCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,7 +131,9 @@
 		FF0633C1202971E00019CA81 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FF4D252F20214CD0001AF361 /* NowPlayingViewController.swift */,
 				FF0633C2202972110019CA81 /* DetailViewController.swift */,
+				FF0633C620297AEF0019CA81 /* SuperheroViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -158,10 +165,9 @@
 			children = (
 				FF0633C1202971E00019CA81 /* View Controllers */,
 				FF0633C0202971D30019CA81 /* Views */,
-				FF4D252F20214CD0001AF361 /* NowPlayingViewController.swift */,
-				FFDBD2F120256CC600389F95 /* MovieCell.swift */,
 				FF4D250120214CB3001AF361 /* AppDelegate.swift */,
 				FF4D250520214CB3001AF361 /* Main.storyboard */,
+				FF0633C420297A840019CA81 /* PosterCell.swift */,
 				FF4D250820214CB3001AF361 /* Assets.xcassets */,
 				FF4D250A20214CB3001AF361 /* LaunchScreen.storyboard */,
 				FF4D250D20214CB3001AF361 /* Info.plist */,
@@ -483,6 +489,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4D253020214CD0001AF361 /* NowPlayingViewController.swift in Sources */,
+				FF0633C520297A840019CA81 /* PosterCell.swift in Sources */,
+				FF0633C720297AEF0019CA81 /* SuperheroViewController.swift in Sources */,
 				FF4D250220214CB3001AF361 /* AppDelegate.swift in Sources */,
 				FFDBD2F220256CC600389F95 /* MovieCell.swift in Sources */,
 				FF0633C3202972110019CA81 /* DetailViewController.swift in Sources */,
