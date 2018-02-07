@@ -16,10 +16,18 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchMovie()
-        collectionView.dataSource = self
         
-        // Do any additional setup after loading the view.
+        collectionView.dataSource = self
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        // Adjust cell size and layout
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = layout.minimumInteritemSpacing
+        let cellsPerLine: CGFloat = 2
+        let interItemSpacingTotal = layout.minimumInteritemSpacing * ( cellsPerLine - 1)
+        let width = collectionView.frame.size.width / cellsPerLine - interItemSpacingTotal/cellsPerLine
+        layout.itemSize = CGSize(width: width, height: width * 3 / 2)
+        
+        fetchMovie()
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -29,7 +37,7 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
         let movie = movies[indexPath.item]
-        print(movie , "SuperheroViewController")
+//        print(movie , "SuperheroViewController")
         if let posterPathString = movie["poster_path"] as? String {
             let baseURLString = "https://image.tmdb.org/t/p/w500/"
             let posterURL = URL(string: baseURLString + posterPathString)!
@@ -50,7 +58,6 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource{
 //                self.present(self.alertController, animated: true)
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                print(dataDictionary)
                 let movies = dataDictionary["results"] as! [[String: Any]]
                 self.movies = movies
                 self.collectionView.reloadData()
