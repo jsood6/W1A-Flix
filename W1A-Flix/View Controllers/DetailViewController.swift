@@ -27,8 +27,10 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         if let movie = movie {
+            
             titleLabel.text = movie[MovieKeys.title] as? String
             releaseDateLabel.text = movie["release_date"] as? String
             overviewLabel.text = movie["overview"] as? String
@@ -40,9 +42,14 @@ class DetailViewController: UIViewController {
             let posterPathURL = URL(string: baseURLString + posterPathString)!
             posterImageView.af_setImage(withURL: posterPathURL)
         }
+//        print("*******movie passed to DetailView", self.movie!)
     }
     
     
+    
+    
+    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

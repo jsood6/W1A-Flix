@@ -130,7 +130,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMv-4b-xwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1492" y="27.436281859070466"/>
+            <point key="canvasLocation" x="1492" y="-40"/>
+        </scene>
+        <!--Trailer View Controller-->
+        <scene sceneID="7Yj-a8-2J3">
+            <objects>
+                <viewController id="hnX-n7-dGE" customClass="TrailerViewController" customModule="W1A_Flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Krd-na-FJm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qco-js-UGA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="h8Z-wO-weB"/>
+                    </view>
+                    <connections>
+                        <outlet property="trailerView" destination="qco-js-UGA" id="Hze-Ej-Zg0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WcW-MZ-Xzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1492" y="725"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="tn5-5w-aKz">
@@ -168,7 +197,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Qb-1k-fOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1079" y="28"/>
+            <point key="canvasLocation" x="-1036" y="366"/>
         </scene>
         <!--Superhero View Controller-->
         <scene sceneID="jcf-HS-GFT">
@@ -204,6 +233,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="posterImageView" destination="dsb-jT-DRl" id="es4-sR-fXP"/>
+                                            <segue destination="hnX-n7-dGE" kind="show" id="K6z-Dt-rBi"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -219,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmU-bD-ZQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55.200000000000003" y="797.45127436281871"/>
+            <point key="canvasLocation" x="703" y="725"/>
         </scene>
         <!--Superhero-->
         <scene sceneID="vj9-mw-6VQ">
@@ -238,7 +268,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyI-tS-epQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1080" y="798.80059970014997"/>
+            <point key="canvasLocation" x="-95" y="725"/>
         </scene>
     </scenes>
     <resources>

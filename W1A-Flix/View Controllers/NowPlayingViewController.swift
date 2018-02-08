@@ -60,7 +60,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
                 self.present(self.alertController, animated: true)
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                print(dataDictionary)
+//                print(dataDictionary)
                 let movies = dataDictionary["results"] as! [[String: Any]]
                 self.movies = movies
                 self.tableView.reloadData()

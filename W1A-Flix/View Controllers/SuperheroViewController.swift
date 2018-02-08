@@ -67,6 +67,29 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource{
         }
         task.resume()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the index of the cell being selected
+        let cell = sender as! UICollectionViewCell
+        if let indexPath = collectionView.indexPath(for: cell){
+            let movie = movies[indexPath.row]
+            let trailerViewController = segue.destination as! TrailerViewController
+            trailerViewController.movie = [movie]
+        }
+    }
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the index of the cell being selected
+//        let cell = sender as! UICollectionViewCell
+//        if let indexPath = collectionView.indexPath(for: cell){
+//            let movie = movies[indexPath.row]
+//            let detailViewController = segue.destination as! DetailViewController
+//            detailViewController.movie = movie
+//        }
+//    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
