@@ -41,7 +41,7 @@ class TrailerViewController: UIViewController, WKUIDelegate {
         let urlBaseStart = "https://api.themoviedb.org/3/movie/"
         let urlBaseEnd = "/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US"
         print ("fetching movie" , self.movie)
-        if  let currentMovie: [[String: Any]] = self.movie {
+        if  let currentMovie = self.movie as? [[String: Any]]  {
             let movieID = currentMovie[0]["id"]!
             let movieIDString: String = "\(movieID)"
             print("sucessfully get movieID back", movieID)
